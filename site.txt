@@ -1,0 +1,315 @@
+Loading sign-db(s)
+Loading db from handspeak.com
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ASL sign for </title>
+<meta name="Description" content="How to sign  in ASL | American Sign Language dictionary." />
+<meta name="author" content="Jolanta A. Lapiak" />
+<link rel="stylesheet" href="/tool/css/header.css" />
+<!-- <script src="/tool/js/handspeak.js"></script> -->
+<style type="text/css">
+.toggleWord { display: none; }
+.toggleWord + label {
+  display: block;
+  cursor: pointer;
+  background-color: #c6e1ec;  color: #3d7489; 
+  border-bottom: 1px solid #fff; border-top: 1px solid #fff;
+position: relative; width: 100%;
+  line-height: 21px;
+  padding: .8em .6em;
+    -webkit-transition: all .5s;
+  transition: all .5s;
+  /*flex: 0 1 auto; -webkit-flex: 0 1 auto;  push content below down */ 
+font: bold 14px arial,tahoma,geneva, verdana; letter-spacing:1px;
+}
+.toggleWord:checked + label, label:hover { background-color: #c6e1ec; color:#3d7489; box-shadow: inset 3px 0px #3d7489;}
+.toggleWord + label + section {  display: none;
+}
+
+.toggleWord:checked + label + section {  display: block;}
+.toggleWord + label:before { /* icon */
+  content: "+";
+display: block;
+  color: #32434f;
+  float: left;
+  font-weight: bold;
+  margin-right: 5px;
+  text-align: center;
+  width: 10px;
+}
+.toggleWord:checked + label:before {content: "-";}
+
+</style>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2906511074664644",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7020840-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-7020840-2');
+</script>
+<div class="header">
+<!-- header.css APRIL 2015-2016 -->
+<nav role="custom-dropdown">
+    <input type="checkbox" id="button">
+    <label for="button" onclick></label>
+    
+<ul class="menusite">
+<li class="" ><a itemprop="url" href="https://www.handspeak.com/" title="Home"><img itemprop="logo" src="/pix/icon-home.png" width="10" height="10" alt="Home"></a>
+</li>
+<li class="active" ><a href="/word/search/" title="Sign Language dictionary">ASL Dictionary</a></li>
+        <li class=""><a href="/learn/" title="ASL tutorials">Learn ASL</a></li>
+        <li class=""><a href="/kid/asl/" title="Signing with children">ASL for Kids</a></li>
+
+<li class=""><a href="/translate/" title="Translation">Translation</a>
+	</li>
+    
+<li class=""><a href="/spell/" title="Fignerspelling">Fingerspelling</a>
+	</li>
+<li class=""><a href="/culture/" title="Sign language culture">Culture</a>
+</li>
+
+<li class=""><a href="/write/asl/" title="written signed language">ASL writing</a>
+	</li>
+    
+<li class=""><a href="/study/" title="Deaf cultural studies">Library</a>
+</li>
+    
+<li class=""><a href="/info/" title="Search" rel="nofollow"><img src="/pix/icon-search.png" width="10" height="10" alt="Search"></a>
+</li>
+  
+</ul>
+</nav>
+</div>
+
+
+
+<div class="grid-main">
+
+<section class="grid-dictbox">
+<h2><span>ASL sign for: </span></h2>
+<div class="dictvideo">
+<video id="mySign" class="v-asl" autoplay 
+  src="/word/0/peacock3.mp4" type="video/mp4"  title="ASL sign for " onmousedown="alert('These videos are protected by copyright laws and may not be reproduced, distributed, edited, or modified. Use a link directly to this web page. If you get this MESSAGE, use PLAY button.'); 
+return false;">
+  <p>The browser Firefox doesn't support the video format mp4.</p>
+  </video>
+  <div>
+<button  class="video-button" onclick="playPause()">PLAY / REPEAT</button> 
+  <button  class="video-speed" onclick="makeRateNormal()">SPEED 1x</button>
+<button class="video-speed" onclick="makeRateSlow()">SLOW</button>
+<button class="video-speed" onclick="makeRateSlower()">SLOWER</button>
+</div>
+  </div>
+
+<script> 
+var mySign = document.getElementById("mySign"); 
+
+function playPause() { 
+    if (mySign.paused) 
+        mySign.play(); 
+    else 
+        mySign.pause(); 
+} 
+function makeRateSlow() { 
+    mySign.playbackRate = 0.5; 
+}
+function makeRateNormal() { 
+    mySign.playbackRate = 1; 
+}
+function makeRateSlower() { 
+    mySign.playbackRate = 0.3; 
+}
+</script> 
+
+<div class="dictext">
+<p>
+peacock</p>
+<p>
+Descriptive classifier
+</p>
+</div>
+
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Dictionary VideoWord Flex bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2906511074664644"
+     data-ad-slot="8620493001"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><!-- end ad-->
+</section><!-- end grid dictbox -->
+
+
+
+
+
+</div><!-- end GRIDROW -->
+
+<p style="clear: both;">
+      </p>
+
+<div class="grid-main" style="margin-top: 20px; margin-bottom: 20px;">
+<!-- SEACRCH WORDLIST BEGIN-->
+<div ng-app="appWordSearch" class="search-grid">
+<div ng-controller="wordsearchCtrl">
+
+<div style="display: flex;">
+<input type="text" ng-model="search.signName" ng-change="filter()" placeholder="   Search word" class="search-input" />
+</div>
+<div>
+<ul class="search-abc" id="activeABC">
+<li><a href="" ng-click="resetFilters()" class="abc-btn abc-active">Browse All</a></li>
+<li><a href="" ng-click="search.menuID='a'" class="abc-btn">A</a></li>
+<li><a href="" ng-click="search.menuID='b'" class="abc-btn">B</a></li>
+  <li><a href="" ng-click="search.menuID='c'" class="abc-btn">C</a></li>
+  <li><a href="" ng-click="search.menuID='d'" class="abc-btn">D</a></li>
+  <li><a href="" ng-click="search.menuID='e'" class="abc-btn">E</a></li>
+  <li><a href="" ng-click="search.menuID='f'" class="abc-btn">F</a></li>
+  <li><a href="" ng-click="search.menuID='g'" class="abc-btn">G</a></li>
+  <li><a href="" ng-click="search.menuID='h'" class="abc-btn">H</a></li>
+  <li><a href="" ng-click="search.menuID='i'" class="abc-btn">I</a></li>
+  <li><a href="" ng-click="search.menuID='j'" class="abc-btn">J</a></li>
+  <li><a href="" ng-click="search.menuID='k'" class="abc-btn">K</a></li>
+  <li><a href="" ng-click="search.menuID='l'" class="abc-btn">L</a></li>
+  <li><a href="" ng-click="search.menuID='m'" class="abc-btn">M</a></li>
+  <li><a href="" ng-click="search.menuID='n'" class="abc-btn">N</a></li>
+  <li><a href="" ng-click="search.menuID='o'" class="abc-btn">O</a></li>
+  <li><a href="" ng-click="search.menuID='p'" class="abc-btn">P</a></li>
+  <li><a href="" ng-click="search.menuID='q'" class="abc-btn">Q</a></li>
+  <li><a href="" ng-click="search.menuID='r'" class="abc-btn">R</a></li>
+  <li><a href="" ng-click="search.menuID='s'" class="abc-btn">S</a></li>
+  <li><a href="" ng-click="search.menuID='t'" class="abc-btn">T</a></li>
+  <li><a href="" ng-click="search.menuID='u'" class="abc-btn">U</a></li>
+  <li><a href="" ng-click="search.menuID='v'" class="abc-btn">V</a></li>
+  <li><a href="" ng-click="search.menuID='w'" class="abc-btn">W</a></li>
+  <li><a href="" ng-click="search.menuID='x'" class="abc-btn">X</a></li>
+  <li><a href="" ng-click="search.menuID='y'" class="abc-btn">Y</a></li>
+  <li><a href="" ng-click="search.menuID='z'" class="abc-btn">Z</a></li>
+</ul>
+</div>
+
+<div ng-show="filteredItems > 0">
+<ul class="col-abc">
+<li ng-repeat="data in filtered = (wordlist | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit"><a href="/word/search/index.php?id={{data.signID}}">{{data.signName}}</a></li>
+</ul>
+</div>
+
+<div class="grid-row" ng-show="filteredItems == 0">
+<p style="padding: 10px;">Hmm, no words found at the moment. Try synonyms?</p>
+</div>
+
+<div class="grid-row" ng-show="filteredItems > 0"> 
+<div pagination="" page="currentPage" max-size="3" on-select-page="setPage(page)" boundary-links="true" total-items="filteredItems" items-per-page="entryLimit" previous-text="«" next-text="»"></div>
+<section>
+<select ng-model="entryLimit" class="form-control">
+<option value="5">page size: 5</option>
+<option value="10">page size: 10</option>
+<option value="25">page size: 25</option>
+<option value="50">page size: 50</option>
+<option value="75">page size: 75</option>
+</select>
+</section>
+</div>
+
+</div>
+</div>
+<!-- SEARCH WORDLIST END -->
+
+<!--<div style="padding: 20px 5px;">
+Search Help
+If a search query cannot be found, try a synonym. Not finding the word? Send your request to Handspeak.
+
+Pointers to remember
+Like any other spoken languges, ASL is a natural language with its complex linguistic structures and rules. Many ASL words have their inflections and classifiers used in ASL sentences.
+
+As every language does evolve over time and space, ASL has its variations due to regions, age/generation, gender, and other factors.
+<p>
+<b>Browse by alphabetical letters</b>
+</p>
+<php include_once $_SERVER['DOCUMENT_ROOT'] . '/word/list/index-navletter.php'; ?>
+</div>-->
+
+</div><!-- end search grid-->
+<script>
+// Active class for the current ABC button menu
+var header = document.getElementById("activeABC");
+var btns = header.getElementsByClassName("abc-btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("abc-active");
+  current[0].className = current[0].className.replace(" abc-active", "");
+  this.className += " abc-active";
+  });
+}
+</script>
+<script src="/word/search/app/angular.min.js"></script><!-- three files for wordlist search-->
+<script src="/word/search/app/ui-bootstrap-tpls-0.10.0.min.js"></script>
+<script src="/word/search/app/app2019.js"></script>
+
+<footer>
+<!-- HS FOOTER -->
+<!-- <span style="-webkit-transform: rotate(45deg);transform: rotate(45deg);">&#9906;</span> -->
+<div class="footlink">
+<ul>
+<li><a href="http://www.handspeak.com/info/" rel="nofollow">🔎︎ SEARCH</a></li>
+ <li><a href="http://www.handspeak.com/info/index.php?info=app">&#x2605; APP</a></li>
+<li><a href="/tool/email/" rel="nofollow">&#9993; CONTACT</a></li>
+<li><a href="/info/index.php?info=donate" rel="nofollow">GIVE BACK &#10084; TO THIS SITE</a></li>
+</ul>
+</div> <!-- end id navtool -->
+<div class="footer-grid">
+<p>
+<img src="/pix/hslogo2019.svg" width="30px" height="30px" alt="handspeak.com logo" style="padding-right:20px; float:left;">
+<!-- <img src="/pix/hslogoimage2011-90.jpg" width="30" height="30" alt="handspeak.com logo" > -->
+<!--<img src="/info/about/jolanta.jpg" width="100" height="100" alt="jolanta lapiak">-->
+</p>
+<p>
+ASL on this site primarily comes from authentic culturally Deaf people and codas who speak ASL and other signed languages as their first language. This site creator is an ASL instructor and native signer who expresses love and passion for our sign language and culture <a href="/info/index.php?info=about" title="about the site">[...]</a>
+</p>
+</div>
+
+<!-- <section class="footer-grid">
+<h4 class="footer-title">Follow or share</h4>
+<ul style="list-style-type:none;">
+<li>
+<a href="http://www.youtube.com/user/TheHandspeak" target="_blank" rel="nofollow">YouTube</a></li>
+<li>
+<a href="https://plus.google.com/117046585397298185856" target="_blank" rel="nofollow">Google Plus</a>
+</li> 
+<li>
+<a href="https://www.facebook.com/pages/Handspeak/135791766826" target="_blank" rel="nofollow">Facebook</a></li>
+<li><a href="http://www.twitter.com/handspeak/" target="_blank" rel="nofollow">Twitter</a></li>
+</ul>
+</section> -->
+
+<div class="copyright">
+<a href="/info/index.php?info=copyright" rel="nofollow">Copyright</a> &copy; 1996-2019 Jolanta Lapiak. All Rights Reserved. Handspeak&#174; trademarked. 
+| <a href="/info/index.php?info=copyright" rel="nofollow">privacy policy</a> |
+<a href="/info/index.php?info=linkus" rel="nofollow">link to us</a> | <a href="javascript:window.external.addFavorite('http://www.handspeak.com','HandSpeak: Sign Language Online');" rel="nofollow">bookmark</a>
+</div>
+</footer>
+
+</body>
+</html>
+
