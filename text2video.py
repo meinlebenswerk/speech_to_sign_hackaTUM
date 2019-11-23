@@ -1,6 +1,7 @@
 import urllib.request
 import requests
 import json
+import re
 
 def HTTP_GET(url):
     fp = urllib.request.urlopen(url)
@@ -27,6 +28,7 @@ class text2video:
 
     def __init__(self):
         print('Loading sign-db(s)')
+        self.db = {}
         self._loadDB()
 
     def _parseHandSpeakEntry(self, entry):
@@ -34,17 +36,25 @@ class text2video:
         name = entry["signName"].lower()
         url = "https://www.handspeak.com/word/search/index.php?id={}".format(id)
         site = HTTP_GET(url)
-        print(site)
-        import os
-        os._exit(1)
-        return name
+        video_url = re.findall(r'("mySign").*\n.*(src=")([^\"]*)', site)[0][2]
+        video_url = "https://www.handspeak.com{}".format(video_url)
+        status = HTTP_STATUS_CHECK(url)
+        if status == 400:
+            return
+        entry = (id, video_url)
+        print('new entry for {}'.format(name))
+        print(entry)
+        self.db[name] = entry
+
+        with open('word_db.json', 'w') as fp:
+            json.dump(self.db, fp)
 
     def _loadDB(self):
         print('Loading db from handspeak.com')
         raw = LOAD_FILE("/home/jan/Documents/hackaTUM/db.txt")
-        #self.db = HTTP_GET("https://www.handspeak.com/word/search/app/getlist.php")
+        # self.db = HTTP_GET("https://www.handspeak.com/word/search/app/getlist.php")
         self.json_db = json.loads(raw)
-        self.db = list(map(self._parseHandSpeakEntry, self.json_db))
+        tmp = list(map(self._parseHandSpeakEntry, self.json_db))
         print('loaded {} records into db'.format(len(self.json_db)))
         # print(self.db)
 
