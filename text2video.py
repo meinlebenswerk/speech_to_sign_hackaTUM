@@ -1,86 +1,72 @@
-import urllib.request
-import requests
-import json
-import re
-
-def HTTP_GET(url):
-    fp = urllib.request.urlopen(url)
-    if fp.getcode == 404:
-        print('Oh no.')
-    mybytes = fp.read()
-
-    data = mybytes.decode("utf8")
-    fp.close()
-
-    return data
-
-def HTTP_STATUS_CHECK(url):
-    req = requests.head(url)
-    return req.status_code
-
-def LOAD_FILE(path):
-    with open(path, 'r') as content_file:
-        content = content_file.read()
-        return content
+from PyQt5.QtCore import pyqtSignal, QObject
+import os
 
 
-class text2video:
+class text2video(QObject):
 
-    def __init__(self):
+    MAXLEN = 4
+
+    newDataAvailable = pyqtSignal()
+
+    def __init__(self, widget):
+        super(text2video, self).__init__()
+        self.widget = widget
+
         print('Loading sign-db(s)')
-        self.db = {}
-        self._loadDB()
+        self.db = []
+        self.words = []
+        self.nextVideos = []
+        self._makeDB()
 
-    def _parseHandSpeakEntry(self, entry):
-        id = entry["signID"]
-        name = entry["signName"].lower()
-        url = "https://www.handspeak.com/word/search/index.php?id={}".format(id)
-        site = HTTP_GET(url)
-        video_url = re.findall(r'("mySign").*\n.*(src=")([^\"]*)', site)[0][2]
-        video_url = "https://www.handspeak.com{}".format(video_url)
-        status = HTTP_STATUS_CHECK(url)
-        if status == 400:
-            return
-        entry = (id, video_url)
-        print('new entry for {}'.format(name))
-        print(entry)
-        self.db[name] = entry
+    def _makeDB(self):
+        videofiles = [f for f in os.listdir('data/video') if os.path.isfile(os.path.join('data/video', f))]
+        for file in videofiles:
+            word = file.split('.')[0].replace('_', ' ')
+            self.db.append(word)
 
-        with open('word_db.json', 'w') as fp:
-            json.dump(self.db, fp)
+    def sentenceParsed(self, sentence):
+        _words = sentence.lower().split(' ')
+        for word in _words:
+            self.words.append(word)
 
-    def _loadDB(self):
-        print('Loading db from handspeak.com')
-        raw = LOAD_FILE("/home/jan/Documents/hackaTUM/db.txt")
-        # self.db = HTTP_GET("https://www.handspeak.com/word/search/app/getlist.php")
-        self.json_db = json.loads(raw)
-        tmp = list(map(self._parseHandSpeakEntry, self.json_db))
-        print('loaded {} records into db'.format(len(self.json_db)))
-        # print(self.db)
+        while len(self.words) > 0:
+            self._lookupNext()
 
-    def _checkDB(self):
-        for word in self.db:
-            print(word)
+    def _lookupNext(self):
+        lastmatch = None
+        matchlen = 0
+        for i in range(text2video.MAXLEN):
+            lookup = ' '.join(self.words[0:i+1])
+            # print('lookup:', lookup)
+            if lookup in self.db:
+                lastmatch = lookup
+                matchlen = i+1
 
-    """ return either a valid video-url or None :) """
-    def getVideoURL(self, sign):
-        url = "https://www.handspeak.com/word/{}/{}.mp4".format(sign.lower()[0], sign)
-        status = HTTP_STATUS_CHECK(url)
-        if status == 400:
-            print('could not load sign {}'.format(sign))
+        print('matchlen:', matchlen)
+
+        if lastmatch is None:
+            # remove last element from self.words
+            chars = list(self.words[0])
+            self.words = self.words[1:]
+            for i in range(len(chars)):
+                self.nextVideos.append(chars[i])
+        else:
+            self.words = self.words[matchlen:]
+            self.nextVideos.append(lastmatch.replace(' ', '_'))
+
+        self.newDataAvailable.emit()
+
+
+
+    def getNextVideo(self):
+        if len(self.nextVideos) == 0:
             return None
-        return url
+        else:
+            return self.nextVideos.pop(0)
 
-def getVideo(sign):
-    fp = urllib.request.urlopen("https://www.handspeak.com/word/search/app/getlist.php")
-    mybytes = fp.read()
-
-    mystr = mybytes.decode("utf8")
-    fp.close()
-
-    print(mystr)
 
 if __name__ == '__main__':
     t2v = text2video()
     #url = t2v.getVideoURL('help')
     #t2v._checkDB()
+

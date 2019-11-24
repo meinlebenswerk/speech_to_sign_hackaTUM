@@ -3,15 +3,17 @@
 
 # <code>
 import azure.cognitiveservices.speech as speechsdk
+import pyaudio
+from azure.cognitiveservices.speech.audio import AudioInputStream
 
 # Creates an instance of a speech config with specified subscription key and service region.
 # Replace with your own subscription key and service region (e.g., "westus").
 speech_key, service_region = "dafac24ff8714e799614afdcc4e5d444", "westeurope"
 speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
-#audio_config = speechsdk.AudioConfig(device_name="hw:CARD=PCH")
+audio_config = speechsdk.AudioConfig(device_name="hw:CARD=PCH,DEV=0")
 
 # Creates a recognizer with the given settings
-speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config,audio_config=audio_config)
+speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
 
 print("Say something...")
 

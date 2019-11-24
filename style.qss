@@ -1,0 +1,26 @@
+QWidget{
+    background: #fff;
+}
+
+QLabel {
+    color: #616267;
+    font-family: Roboto;
+    font-size: 36px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+QPushButton {
+    background: #73a4f8;
+    border-radius: 64px;
+
+    width: 128px;
+    max-width: 128px;
+    height: 128px;
+
+    position: absolute;
+}
+QPushButton[state = "active"]{
+    background: #4385F5;
+}
