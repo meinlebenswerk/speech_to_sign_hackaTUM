@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QLabel, QSplashScreen, QMainWindow, QStackedWidget
-from PyQt5.QtGui import QFontDatabase, QFont, QIcon, QPixmap, QShowEvent
+from PyQt5.QtGui import QFontDatabase, QFont, QIcon, QPixmap, QShowEvent, QColor
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer
 from PyQt5.QtMultimediaWidgets import QVideoWidget
 from PyQt5.QtCore import QUrl, pyqtSignal, Qt, QSize, QTimer
@@ -30,7 +30,7 @@ class MainWindow(QMainWindow):
     def showEvent(self, a0: QShowEvent):
         super(MainWindow, self).showEvent(a0)
         if self.timer is not None:
-            self.timer.start(500)
+            self.timer.start(800)
 
 
 
@@ -152,7 +152,7 @@ class SplashScreen(QWidget):
         self.layout = QVBoxLayout()
 
         self.imgLabel = QLabel(self)
-        pixmap = QPixmap('data/logo_transparent.jpg')
+        pixmap = QPixmap('data/logo.png')
         self.imgLabel.setPixmap(pixmap)
         self.imgLabel.setAlignment(Qt.AlignCenter)
         self.layout.addWidget(self.imgLabel)
